@@ -1,0 +1,31 @@
+.sticky-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #706545; /* Green background */
+    color:  #F9EBEA;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 1000; /* Ensure it appears on top */
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.sticky-button:hover {
+    transform: scale(1.1); /* Slightly increase size */
+}
+.nav{
+    background: #F9EBEA;
+    }
+body{
+    background: #F9EBEA;
+}
+/* .casestudy {
+    width:70%;
+    margin-top: 2%;
+    align-content: center;
+} */
