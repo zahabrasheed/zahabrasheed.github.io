@@ -357,7 +357,7 @@ a {
 
 .about-image {
     flex: 1;
-    max-width: 50%; /* Set a percentage width for image */
+    max-width: 60%; /* Set a percentage width for image */
 }
 
 .about-content {
