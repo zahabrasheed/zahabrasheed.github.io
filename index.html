@@ -9,23 +9,18 @@
 </head>
 <body>
     <nav class="nav">
-        <h1 id = "home">Zahabiyah Rasheed</h1>
+        <h1><a href="/index.html">Zahabiyah Rasheed</a></h1>
         <ul class= "nav-links">
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#about">About Me</a></li>
+            <li><a href="/index.html#projects">Projects</a></li>
+            <li><a href="/index.html#about">About Me</a></li>
             <li><a href="/resume.html">Resume</a></li>
-        
-       <li> <div class="social-icons">
-            <a href="https://github.com/zahabrasheed" target="_blank">
-                <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub">
-            </a>
-            <a href="https://www.linkedin.com/in/zahabiyah-rasheed-27018528b/" target="_blank">
-                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
-            </a>
+            <li><a href="https://www.linkedin.com/in/zahabiyah-rasheed-27018528b/">Linkedin</a></li>
+            <li><a href="https://github.com/zahabrasheed">Github</a></li>
         </li>
         </ul>
         </div>
     </nav>
+    
     <div class = "home" >
     <img class = "gradient1" src="/assets/Ellipse 1.png" alt="background gradient 1">
     <img class = "gradient-3" src="/assets/Ellipse 3.png" alt="background gradient 3">
@@ -43,34 +38,72 @@
     <img src="/assets/projectgradient.png" class="project-gradient" alt="Project Gradient">
     <h1 id = "projects" > Projects</h1>
 </div>
-    <div class="grid-container">
-        <!-- Box 1 -->
-        <div class="project-box">
-            <a href="./html/project1.html">
-                <div class="box-content">
-                    <img src="/assets/maz.png" alt="Project 1">
-                    <div class="caption"><h2> Hogwarts Style Point Tracker</h2></div>
+    
+<div class="grid-container">
+    <!-- Box 1 -->
+    <div class="project-box">
+        <div class="box-content">
+            <div class="project-info">
+                <h3>From Excel Sheets to Seamless Tracking</h3>
+                <h2>Hogwarts Style Point Tracker</h2>
+                <p>A user-friendly platform empowering teachers to track student behavior and fostering trust between educators and parents with ease.</p>
+                <a href="./html/project1.html" class="view-case-study-btn">View case study</a>
+                <div class="project-metrics">
+                    <p><strong>Explorations:</strong> User-centered design, security implementation, behavior tracking</p>
+                    <p><strong>Project Type:</strong> New feature, design system</p>
+                    <p><strong>Tech Stack:</strong> Supabase, Next.js, TypeScript, Netlify, PostgreSQL, Git, Figma</p>
                 </div>
-            </a>
+            </div>
+            <div class="project-image">
+                <img src="/assets/maz_mockup.png" alt="Hogwarts Style Point Tracker">
+            </div>
         </div>
+    </div>
+</div>
         <!-- Box 2 -->
         <div class="project-box">
-            <a href="./html/project2.html">
-                <div class="box-content">
-                    <img src="assets/bisweb.png" alt="Project 2">
-                    <div class="caption"><h2>Bioanthropology Research Websites</h2></div>
+            <div class="box-content">
+                <div class="project-info">
+                    <h3>Showcasing Groundbreaking Research</h3>
+                    <h2>Bioanthropology Research Website</h2>
+                    <p>
+                        Dr. Beverly I. Strassmann, a biological anthropologist conducting a longitudinal study on the Dogon people of Mali, 
+                        sought to revamp her outdated research website. Collaborating with a co-designer, I focused on creating a 
+                        user-friendly platform to highlight her research interests, collaborators, and publications.
+                    </p>
+                    <a href="./html/bioanthropology.html" class="view-case-study-btn">View case study</a>
+                    <div class="project-metrics">
+                        <p><strong>Explorations:</strong> User-centered design, accessible research resources, academic visibility</p>
+                        <p><strong>Project Type:</strong> Website redesign, collaborative initiative</p>
+                        <p><strong>Tech Stack:</strong> WordPress, HTML, CSS, Figma</p>
+                    </div>
                 </div>
-            </a>
+                <div class="project-image">
+                    <img src="/assets/bis_mockup.png" alt="Anthropology Research Website">
+                </div>
+            </div>
         </div>
-        <!-- Box 3 -->
+        
         <div class="project-box">
-            <a href="./html/npcompanion.html">
-                <div class="box-content">
-                    <img src="./assets/npcompanion.png" alt="Project 3">
-                    <div class="caption"><h2>Nurse Mentorship Platform</h2></div>
+            <div class="box-content">
+                <div class="project-info">
+                    <h3>Empowering New Nurse Practitioners</h3>
+                    <h2>NP Nurse Companion Project</h2>
+                    <p>Developing a mobile-first application to support newly qualified Nurse Practitioners during their 
+                        transition into practice, focusing on mentorship, progress tracking, and resource accessibility.</p>
+                    <a href="./html/project2.html" class="view-case-study-btn">View case study</a>
+                    <div class="project-metrics">
+                        <p><strong>Explorations:</strong> User experience design, mentorship matching algorithms, healthcare compliance</p>
+                        <p><strong>Project Type:</strong> Mobile app development, collaborative initiative</p>
+                        <p><strong>Tech Stack:</strong> FLutter, PostgreSQL, React, Figma</p>
+                    </div>
                 </div>
-            </a>
+                <div class="project-image">
+                    <img src="/assets/npcompanion.png" alt="NP Nurse Companion Project">
+                </div>
+            </div>
         </div>
+        
         <!-- Box 4 -->
         <!-- <div class="project-box">
             <a href="./html/project4.html">
@@ -113,14 +146,16 @@
                 I am a computer science student at the University of Michigan, 
                 passionate about creating user-friendly digital experiences. 
                 My experience includes full-stack development, data analysis, 
-                and UI/UX design, with skills in Figma, React, Next.js, Python, HTML, and CSS.
-                 I'm constantly expanding my knowledge of frameworks and best practices to build user-focused applications.
+                and UI/UX design. Outside of academics, I enjoy photography, baking, 
+                exploring cafes, creating henna designs, and diving into great books 
+                and shows. These hobbies inspire my creativity and help me design 
+                applications that are both functional and meaningful to users.
 
                 </p>
-                <p>Outside of academics, I enjoy photography, baking, exploring cafes, 
-                creating henna designs, and diving into great books and shows. 
-                These hobbies inspire my creativity and help me design applications that are both
-                 functional and meaningful to users.
+                <p> <strong>Technical Skills: </strong> C++, Python, JavaScript, HTML, CSS, TypeScript, 
+                    SQL, R, React, Next.js, Flutter, PostgreSQL, Supabase, 
+                    Git, Figma, Flask, REST APIs, UX Design, Adobe
+
                 
                 
             

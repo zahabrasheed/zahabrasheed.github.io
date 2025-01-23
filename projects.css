@@ -1,3 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Lora", serif; /* Apply Lora to the body */
+    background: #B3BCBB;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center the items horizontally */
+    justify-content: flex-start; /* Start from the top */
+    min-height: 100vh; /* Ensure body takes full height */
+    padding: 20px; /* Optional: adds some space around the content */
+}
+
+/* Text Styling */
+p {
+    font-family: "Roboto Condensed", sans-serif; /* Apply Roboto Condensed to paragraphs */
+    color:  #3B4443;
+}
+
+/* Transition */
+a {
+    transition: all 300ms ease;
+}
 /* General Styling for the Navigation Bar */
 .nav {
     display: flex;
@@ -44,6 +78,8 @@
 
 .nav-links li {
     display: inline-block;
+    font-family: "Lora", serif; /* Apply Lora to the body */
+
 }
 
 .nav-links a {
@@ -52,6 +88,7 @@
     font-size: 26px;
     font-weight: bold;
     transition: color 0.3s ease;
+
 }
 
 .nav-links a:hover {
@@ -59,40 +96,6 @@
     text-decoration: underline;
 }
 
-
-/* Styling for the Social Icons Container */
-.social-icons {
-    display: flex;
-    gap: 10px;
-    overflow: hidden; /* Prevent icons from overflowing */
-    flex-wrap: wrap; /* Wrap icons to prevent overflow */
-}
-
-.social-icons img {
-    width: 30px;
-    height: auto;
-    border-radius: 50%;
-    object-fit: cover;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.social-icons img:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-/* Underline for Navigation Bar */
-.nav-underline {
-    width: 264.002px;
-    height: 0;
-    border: 0;
-    top: 95px;
-    border-top: 2px solid rgba(112, 101, 69, 1);
-    margin: 0 auto;
-    align-items: center;
-    position: sticky;
-}
 
 .sticky-button {
     position: fixed;
@@ -151,10 +154,8 @@ main {
 }
 
 .project {
-    background-color: #B3BCBB;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .project-title {
@@ -171,50 +172,54 @@ main {
 
 h2 {
     font-family: 'Lora', serif;
-    font-size: 1.8rem;
+    font-size: 35 px;
     font-weight: 700;
     color: #706545;
     margin-bottom: 15px;
 }
 h1{
     color: #706545;
-    font-size: 3rem;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 3%;
 
 }
 ul {
     list-style: none;
-    font-size: 20px;
+    font-size: 24px;
 }
 
 ul li {
-    margin-bottom: 20px;
+    margin-bottom: 24px;
+    font-family: "Roboto Condensed", sans-serif; /* Apply Roboto Condensed to paragraphs */
+
 }
 
 ul li strong {
     font-weight: 700;
+    font-family: "Roboto Condensed", sans-serif; /* Apply Roboto Condensed to paragraphs */
+
 }
 
 p{
-    font-size: 20px;
+    font-size: 24px;
+    font-family: "Roboto Condensed", sans-serif; /* Apply Roboto Condensed to paragraphs */
+
 }
 footer p {
     margin: 0;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .nav {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+.hook {
+    align-items: center;
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: #7E958F;
+    background-size: 10%;
+    color: black;
+    border-radius: 36px;
+    padding: 5%;
 
-    .nav-links {
-        margin-top: 1rem;
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    main {
-        padding: 0 1rem;
-    }
 }
+/* Responsive Styles */
