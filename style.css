@@ -128,7 +128,7 @@ a {
 
 /* Sticky Line Under the Navigation */
 .nav-underline {
-    width: 264.002px;
+    width:400.002px;
     height: 0;
     border: 0;
     top: 95px;
@@ -337,7 +337,7 @@ a {
 .project-box {
     display: flex;
     align-items: flex-start; /* Align text and image consistently */
-    background-color: #EFD0CE;
+    background-color: #F9EBEA;
     border-radius: 16px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding: 30px;
