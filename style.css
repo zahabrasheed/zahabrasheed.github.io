@@ -490,7 +490,7 @@ a {
 .about-heading {
     position: relative; /* Establish positioning context for child elements */
     padding: 100px 20px; /* Create spacing for text */
-    margin-top: 150px; /* Adjust the top margin */
+    margin-top: 50px; /* Adjust the top margin */
     text-align: right; /* Align text to the right */
     z-index: 2; /* Ensure text stays above the background */
     width: 100%; /* Ensure the container spans the full width */
