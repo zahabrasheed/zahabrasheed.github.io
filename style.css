@@ -165,7 +165,7 @@ a {
         display: none; /* Hide links by default */
         width: 100%;
         flex-direction: column;
-        background-color: #333;
+        background-color: #B3BCBB;
         position: absolute;
         top: 60px;
         left: 0;
@@ -193,108 +193,67 @@ a {
     }
 }
 
-/* Base Styling */
 .definition-box {
     position: relative;
     width: 90%; /* Use a percentage for responsive width */
     max-width: 700px; /* Restrict maximum width for larger screens */
     height: auto; /* Adjust height dynamically based on content */
-    aspect-ratio: 7 / 3; /* Maintain aspect ratio */
-    flex-shrink: 0;
+    aspect-ratio: auto; /* Maintain natural aspect ratio based on content - switch to auto */
+    flex-shrink: 1; /* Allow the box to shrink as needed */
     border-radius: 36px;
-    box-shadow: black;
-    background-size: cover; /* Ensure the image scales correctly */
-    background-position: center; /* Keeps the image centered */
-    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden; /* Clip the content on the inside */
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center; /* Center items vertically and horizontally */
     text-align: left;
     flex-direction: column;
-    padding: 5%; /* Use percentage-based padding */
-    margin: 20px auto; /* Center with margin */
-    margin-top: 180px; /* Adjust based on design needs */
+    padding: 5%;
+    margin: 20px auto;
+    margin-top: 180px;
 }
 
-/* Text Styling */
-.definition-box h1 {
+.definition-box h1, .definition-box h3, .definition-box p {
     color: #3B4443;
-    font-family: "Lora", serif;
-    font-size: 4vw; /* Responsive font size */
-    font-weight: 700;
-    line-height: normal;
-    position: relative;
     z-index: 1;
+    width: 100%; /* Ensure full-width use for text */
     margin-bottom: 2%; /* Use relative margins */
+    text-align: center; /* Align text in center for smaller screens */
+    max-width: 100%; /* Ensure they don't exceed parent */
+    word-wrap: break-word; /* Ensure words break properly for smaller devices */
 }
 
-.definition-box h3 {
-    color: #3B4443;
-    font-family: "Lora", serif;
-    font-size: 3vw; /* Responsive font size */
-    font-style: italic;
-    font-weight: 700;
-    line-height: normal;
-    position: relative;
-    z-index: 1;
-    margin-bottom: 2%;
-}
 
-.definition-box p {
-    color: #3B4443;
-    font-family: "Roboto Condensed", sans-serif;
-    font-size: 2.5vw; /* Responsive font size */
-    font-weight: 400;
-    line-height: normal;
-    width: 100%;
-    flex-shrink: 0;
-    position: relative;
-    z-index: 1;
-    text-align: left;
-}
-
-/* Responsive Adjustments for Smaller Screens */
 @media (max-width: 768px) {
-    .definition-box {
-        padding: 10%; /* Increase padding for smaller screens */
-        margin-top: 100px; /* Adjust top margin for smaller screens */
-    }
-
     .definition-box h1 {
-        font-size: 6vw; /* Adjust font size for smaller screens */
-        margin-bottom: 5%;
+        font-size: 5vw; /* Adjust font size to be responsive */
+        margin-bottom: 4%;
     }
-
     .definition-box h3 {
-        font-size: 5vw; /* Adjust font size for smaller screens */
-        margin-bottom: 5%;
+        font-size: 4vw;
+        margin-bottom: 4%;
     }
-
     .definition-box p {
-        font-size: 4vw; /* Adjust font size for smaller screens */
-        text-align: center; /* Center align text on small screens */
+        font-size: 3.5vw;
+        line-height: 1.5; /* Slightly larger line-height for better readability */
     }
 }
 
 @media (max-width: 480px) {
     .definition-box {
-        padding: 12%; /* Adjust padding further for smaller devices */
-        margin-top: 50px; /* Adjust top margin for very small screens */
+        margin-top: 50px;
     }
-
     .definition-box h1 {
-        font-size: 7vw; /* Further adjust font size */
+        font-size: 6vw;
     }
-
     .definition-box h3 {
-        font-size: 6vw; /* Further adjust font size */
+        font-size: 5.5vw;
     }
-
     .definition-box p {
-        font-size: 5vw; /* Further adjust font size */
+        font-size: 4.5vw;
     }
 }
-
 
 .project-heading h1 {
     font-size: 64px;
@@ -325,11 +284,12 @@ a {
 
 
 
+/* General Flexbox Centering for Grid */
 .grid-container {
     display: flex;
-    flex-direction: column; /* Stack all project boxes vertically */
-    justify-content: center;
-    align-items: center;
+    flex-wrap: wrap; /* Allow boxes to wrap when screen is small */
+    justify-content: center; /* Center horizontally */
+    align-items: flex-start; /* Align items to the top */
     padding: 40px;
     gap: 30px; /* Add spacing between project boxes */
 }
@@ -409,7 +369,6 @@ a {
     box-shadow: 0 0 12px #EBB0AA, 0 0 20px #EBB0AA; /* Stronger glow on focus */
 }
 
-
 .project-metrics p {
     font-size: 16px;
     color: #3B4443;
@@ -429,60 +388,68 @@ a {
     height: auto; /* Maintain aspect ratio */
 }
 
-/* Responsive design for tablets */
-@media screen and (max-width: 768px) {
-    .project-box {
-        flex-direction: column; /* Stack text and image vertically */
-        text-align: center;
-    }
-
-    .project-info {
-        max-width: 100%;
-        padding: 20px 0;
-    }
-
-    .project-image {
-        max-width: 100%;
-        text-align: center;
-    }
-
-    .project-image img {
-        max-width: 100%; /* Scale down image */
-    }
-}
-
-/* Responsive design for mobile */
-@media screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
+    /* Change the flex direction to column for small screens */
     .grid-container {
-        padding: 20px;
-        gap: 20px; /* Smaller spacing between boxes */
+        flex-direction: column;
+        align-items: center; /* Center align the content */
+        padding: 20px; /* Adjust padding for smaller screens */
     }
 
+    /* Stack the content vertically in the project box */
     .project-box {
+        flex-direction: column;
+        align-items: center;
         padding: 20px;
-        gap: 15px; /* Smaller gap between text and image */
+        width: 100%;
+        gap: 20px; /* Adjust the gap for smaller devices */
+        margin-bottom: 30px; /* Add margin to separate boxes */
+    }
+
+    .box-content {
+        flex-direction: column; /* Stack the project info and image vertically */
+        align-items: center;
+        gap: 20px; /* Add some spacing between the text and image */
+    }
+
+    /* Adjust text size for project info */
+    .project-info {
+        max-width: 100%; /* Allow project info to take full width on small screens */
+        padding: 10px;
+    }
+
+    .project-info h3 {
+        font-size: 14px; /* Make the heading smaller */
     }
 
     .project-info h2 {
-        font-size: 20px; /* Adjust title size */
+        font-size: 20px; /* Adjust the size of the project title */
     }
 
     .project-info p {
-        font-size: 14px;
-        line-height: 1.5; /* Tighter spacing for mobile */
+        font-size: 14px; /* Adjust paragraph font size */
     }
 
     .view-case-study-btn {
-        padding: 10px 16px;
-        font-size: 14px;
+        font-size: 14px; /* Adjust button font size */
+        padding: 8px 16px; /* Smaller padding for the button */
+        margin-top: 10px; /* Add some space between the button and text */
     }
 
-    .project-metrics p {
-        font-size: 12px;
+    /* Adjust project image to fit within the container */
+    .project-image {
+        max-width: 100%;
+        text-align: center; /* Center the image on small screens */
     }
 
     .project-image img {
-        border-radius: 8px;
+        max-width: 100%; /* Ensure the image scales well */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    /* Adjust the project-metrics for mobile */
+    .project-metrics p {
+        font-size: 14px; /* Smaller font size for project metrics */
     }
 }
 
@@ -547,11 +514,23 @@ a {
     text-align: left; /* Align text to the left */
 }
 
-.collage{
+.collage {
     margin-top: 10px;
-    display:flex;
+    display: grid;
+    gap: 20px; /* Space between images */
+    justify-items: center; /* Center images within their grid cells */
     z-index: 100;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Ensure responsive grid with a minimum width of 220px per image */
+}
 
+/* Collage Image Styles */
+.collage-img-1, .collage-img-2, .collage-img-3, .collage-img-4, .collage-img-5 {
+    border-radius: 36px;
+    background-size: cover; /* Keep the image size as cover */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat;
+    width: 100%; /* Ensure full width within grid */
+    height: 300px; /* Default height */
 }
 .collage-img-1{
     width: 208px;
@@ -602,3 +581,97 @@ a {
     background: url('/assets/Ellipse7.png') no-repeat center;
     z-index: 0; /* Place gradient behind all content */
 }
+/* Media Queries for Responsiveness */
+@media only screen and (max-width: 1024px) {
+    .about-section {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .about-heading h1 {
+        font-size: 48px; /* Adjust font size */
+        text-align: center; /* Center the heading */
+        right: 0; /* Remove right alignment */
+    }
+
+    .about-image {
+        max-width: 80%; /* Allow the image to take more space */
+        margin-top: 20px;
+    }
+
+    .about-content {
+        font-size: 18px;
+        line-height: 1.8;
+        padding: 20px;
+        width: 100%;
+    }
+
+    .collage {
+        grid-template-columns: repeat(3, 1fr); /* 3 images per row */
+    }
+
+    .collage-img-1, .collage-img-2, .collage-img-3, .collage-img-4, .collage-img-5 {
+        height: 250px; /* Adjust height for tablets */
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .about-heading {
+        padding: 50px 10px;
+        height: 250px; /* Adjust height for smaller screens */
+    }
+
+    .about-heading h1 {
+        font-size: 36px; /* Reduce font size for mobile */
+        text-align: center; /* Center align the heading */
+        right: 0; /* Remove right positioning */
+    }
+
+    .about-image {
+        max-width: 100%; /* Ensure image takes full width */
+        margin-top: 15px;
+    }
+
+    .about-content {
+        font-size: 16px;
+        line-height: 1.6;
+        padding: 15px;
+        width: 100%;
+    }
+
+    .collage {
+        grid-template-columns: repeat(3, 1fr); /* 3 images per row */
+    }
+
+    .collage-img-1, .collage-img-2, .collage-img-3, .collage-img-4, .collage-img-5 {
+        height: 200px; /* Adjust height for mobile */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .about-heading {
+        padding: 40px 10px;
+        height: 200px; /* Reduce height further for smaller screens */
+    }
+
+    .about-heading h1 {
+        font-size: 28px; /* Further reduce font size */
+        text-align: center; /* Ensure heading is centered */
+    }
+
+    .about-content {
+        font-size: 14px; /* Smaller font size for mobile */
+        padding: 10px;
+    }
+
+    .collage {
+        grid-template-columns: 1fr; /* Stack images vertically in 1 column */
+    }
+
+    .collage-img-1, .collage-img-2, .collage-img-3, .collage-img-4, .collage-img-5 {
+        height: 160px; /* Adjust height for very small screens */
+    }
+}
+

@@ -1,68 +1,71 @@
+html {
+    font-size: 16px; /* This will enable 1rem to equal 16px */
+}
+
 /* Media Query for Smaller Screens (e.g., Mobile) */
-@media (max-width: 768px) {
+@media (max-width: 48rem) { /* 768px converted to rem */
     .nav {
         flex-direction: column;
         height: auto;
-        padding: 20px;
+        padding: 1.25rem;
     }
 
     .nav h1 {
-        font-size: 30px;
-        margin-bottom: 10px;
+        font-size: 1rem; /* 30px in rem */
+        margin-bottom: 0.625rem;
     }
 
     .nav-links {
         flex-direction: column;
-        gap: 10px;
+        gap: 0.625rem;
         width: 100%;
-        margin-bottom: 20px;
+        margin-bottom: 1.25rem;
     }
 
     .nav-links a {
-        font-size: 16px;
+        font-size: 1rem; /* 16px in rem */
     }
 
     .social-icons {
         width: 100%;
         justify-content: center;
-        margin-top: 10px;
+        margin-top: 0.625rem;
     }
 
     .social-icons img {
-        width: 25px;
+        width: 1.5625rem; /* 25px in rem */
     }
 }
-/* Media Queries for Different Devices */
 
 /* Larger Screens (e.g., Desktop) */
-@media (min-width: 1024px) {
+@media (min-width: 64rem) { /* 1024px converted to rem */
     .definition-box {
-        width: 700px; /* Fixed width for larger screens */
-        padding: 30px; /* Fixed padding for desktop */
+        width: 43.75rem; /* 700px in rem */
+        padding: 1.875rem; /* 30px in rem */
     }
 
     .definition-box h1 {
-        font-size: 50px;
+        font-size: 3.125rem; /* 50px in rem */
     }
 
     .definition-box h3 {
-        font-size: 24px;
+        font-size: 1.5rem; /* 24px in rem */
     }
 
     .definition-box p {
-        font-size: 20px;
+        font-size: 1.25rem; /* 20px in rem */
     }
 }
 
 /* Medium Screens (e.g., Tablets) */
-@media (max-width: 1024px) {
+@media (max-width: 64rem) { /* 1024px converted to rem */
     .definition-box {
-        width: 90%; /* Adjust for tablets */
+        width: 90%; /* Responsive adjustment for tablets */
         padding: 5%;
     }
 
     .definition-box h1 {
-        font-size: 6vw; /* Relative size for tablets */
+        font-size: 6vw; /* Relative size based on viewport width */
     }
 
     .definition-box h3 {
@@ -75,15 +78,15 @@
 }
 
 /* Small Screens (e.g., Mobile) */
-@media (max-width: 600px) {
+@media (max-width: 37.5rem) { /* 600px converted to rem */
     .definition-box {
-        width: 95%; /* Adjust for smaller screens */
+        width: 95%; /* Responsive adjustment for smaller screens */
         padding: 4%;
-        border-radius: 20px; /* Smaller border radius */
+        border-radius: 1.25rem; /* 20px in rem */
     }
 
     .definition-box h1 {
-        font-size: 6.5vw;
+        font-size: 6.5vw; 
     }
 
     .definition-box h3 {
