@@ -514,23 +514,11 @@ a {
     text-align: left; /* Align text to the left */
 }
 
-.collage {
+.collage{
     margin-top: 10px;
-    display: grid;
-    gap: 20px; /* Space between images */
-    justify-items: center; /* Center images within their grid cells */
+    display:flex;
     z-index: 100;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Ensure responsive grid with a minimum width of 220px per image */
-}
 
-/* Collage Image Styles */
-.collage-img-1, .collage-img-2, .collage-img-3, .collage-img-4, .collage-img-5 {
-    border-radius: 36px;
-    background-size: cover; /* Keep the image size as cover */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat;
-    width: 100%; /* Ensure full width within grid */
-    height: 300px; /* Default height */
 }
 .collage-img-1{
     width: 208px;
@@ -606,13 +594,8 @@ a {
         padding: 20px;
         width: 100%;
     }
-
     .collage {
-        grid-template-columns: repeat(3, 1fr); /* 3 images per row */
-    }
-
-    .collage-img-1, .collage-img-2, .collage-img-3, .collage-img-4, .collage-img-5 {
-        height: 250px; /* Adjust height for tablets */
+        display: none; /* Hide the collage on screens smaller than 768px */
     }
 }
 
@@ -642,11 +625,7 @@ a {
     }
 
     .collage {
-        grid-template-columns: repeat(3, 1fr); /* 3 images per row */
-    }
-
-    .collage-img-1, .collage-img-2, .collage-img-3, .collage-img-4, .collage-img-5 {
-        height: 200px; /* Adjust height for mobile */
+        display: none; /* Hide the collage on screens smaller than 768px */
     }
 }
 
@@ -667,11 +646,6 @@ a {
     }
 
     .collage {
-        grid-template-columns: 1fr; /* Stack images vertically in 1 column */
-    }
-
-    .collage-img-1, .collage-img-2, .collage-img-3, .collage-img-4, .collage-img-5 {
-        height: 160px; /* Adjust height for very small screens */
+        display: none; /* Hide the collage on screens smaller than 768px */
     }
 }
-
