@@ -6,8 +6,13 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-
+/* Make sure there's no margin or padding on the body or html tag */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
 html {
     scroll-behavior: smooth;
     font-size: 100%; /* Sets base font size to 16px (1rem) */
@@ -27,7 +32,6 @@ body {
     align-items: center;
     justify-content: flex-start;
     min-height: 100vh;
-    padding: 2vw;
 }
 
 /* Text Styling */
@@ -109,7 +113,7 @@ h1 {
 
 ul {
     list-style: none;
-    font-size: 1.5rem;
+    font-size: 1 rem;
 }
 
 ul li {
@@ -118,7 +122,7 @@ ul li {
 }
 
 ul li strong {
-    font-weight: 700;
+    font-weight: 500;
 }
 
 footer p {
@@ -133,117 +137,214 @@ footer p {
     border-radius: 2rem;
     padding: 5%;
 }
-/* Set the pink color as the background of the navbar */
+
+/* General Styling for the Navigation Bar */
 .nav {
-    background-color: #F9EBEA; /* Pink color */
-    width: 100%;
-    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between; /* Space between the heading and the links */
+    align-items: center; /* Vertically center the content */
+    background-color: #F9EBEA; /* Background color */
+    padding: 10px 20px;
+    height: 8vh;
     position: sticky;
-    top: 0;
-    z-index: 10;
+    top: 0; /* Keeps the nav fixed to the top */
+    z-index: 100; /* Keeps the nav on top */
+    width: 100%; /* Ensures the nav spans the full width */
+    margin: 0; /* Ensure no margin is affecting the width */
 }
 
-/* Set the background of the body (entire page) to the same pink color */
-body {
-    font-family: "Lora", serif;
-    background: #F9EBEA; /* Pink color */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    min-height: 100vh;
-    padding: 2vw;
+
+
+/* Underline for the Navigation Bar */
+.nav::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    border-bottom: 2px solid rgba(112, 101, 69, 1);
+    left: 40%; /* Adjust to control the starting position */
+    width: 20%; /* Adjust to control the width of the line */
+    height: 0px; /* Thickness of the line */
+    background-color: rgba(112, 101, 69, 1); /* Line color */
 }
 
-/* If needed, update nav styling for better visibility */
-.nav h1 a {
-    color: #706545; /* Change text color to stand out from pink background */
-    text-decoration: none;
-    font-size: 2rem;
+
+/* Navigation Heading */
+.nav h1 {
+    font-size: 2rem; /* Use rem for responsiveness */
+    color: rgba(112, 101, 69, 1); /* Color of the heading */
+    margin: 0;
+    padding-right: 100px;
+    font-weight: bolder;
 }
 
-/* For nav toggle button (optional) */
-.nav-toggle {
-    background-color: transparent;
-    border: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    width: 30px;
-    height: 25px;
+/* General Navigation Links Styling */
+.nav a {
+    color: rgba(112, 101, 69, 1); /* Link color */
 }
 
-.nav-toggle .bar {
-    background-color: #706545; /* Darker color for bars */
-    width: 100%;
-    height: 4px;
-    border-radius: 5px;
-}
-
-/* Make sure other elements like nav links look good with pink background */
+/* Navigation Links Layout */
 .nav-links {
     list-style: none;
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    justify-content: flex-start; /* Align links to the left */
+    flex-wrap: wrap; /* Ensure links wrap if there's not enough space */
 }
 
+/* Individual Navigation Item */
 .nav-links li {
-    margin: 0 1rem;
+    display: inline-block;
+    font-family: lora;
 }
 
+/* Navigation Link Styles */
 .nav-links a {
-    text-decoration: none;
-    color: #706545; /* Darker text color */
-    font-size: 26px;
+    color: rgba(112, 101, 69, 1); /* Link color */
+    font-size: 1.6rem; /* Adjusted to use rem for responsiveness */
+    font-weight: bold;
     transition: color 0.3s ease;
-    font-weight: 500;
-    align-items: center;
 }
 
+.nav-links a:hover {
+    color: rgba(112, 101, 69, 1); /* On hover, the color stays the same, but underline shows */
+    text-decoration: underline;
+}
 
+/* Sticky Line Under the Navigation */
+.nav-underline {
+    width: 400px;
+    height: 0;
+    border: 0;
+    top: 95px;
+    border-top: 2px solid rgba(112, 101, 69, 1);
+    margin: 0 auto;
+    align-items: center;
+    position: sticky;
+}
 
-/* Responsive Styles */
+/* Hamburger Button (Hidden on Desktop) */
+.nav-toggle {
+    display: none; /* Initially hidden */
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+    width: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 20px; /* Align to the right of the nav bar */
+}
 
-/* Mobile (up to 600px) */
-@media (max-width: 600px) {
-    
-    img {
-        width: 90vw;
-        height: auto;
+.bar {
+    height: 3px;
+    width: 100%;
+    background-color: #706545;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Make nav links stack vertically on smaller screens */
+    .nav h1 {
+        font-size: 1.6rem; /* Reduced font size for smaller screens */
     }
 
+    .nav-links {
+        display: none; /* Hide links by default */
+        width: 100%;
+        flex-direction: column;
+        background-color: #F9EBEA; /* Ensure the same background */
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    .nav-links li {
+        margin: 1rem 0;
+        text-align: center;
+    }
+
+    /* Show the hamburger button */
+    .nav-toggle {
+        display: flex;
+    }
+
+    /* When the nav-links have the 'active' class, display them */
+    .nav-links.active {
+        display: flex;
+    }
+
+    /* Adjust font size of the links in mobile view */
+    .nav-links a {
+        font-size: 1.4rem;
+    }
+
+    /* Responsive Sticky Button */
     .sticky-button, .sticky-button-bis {
         font-size: 1rem;
         padding: 0.8rem 1.2rem;
-        bottom: 1rem;
-        right: 1rem;
+        right: 1vw;
+        bottom: 4vh;
+    }
+}
+
+@media (max-width: 600px) {
+    .nav h1 {
+        font-size: 1.4rem; /* Even smaller font size for smaller screens */
     }
 
-    .project-title {
-        font-size: 2rem;
+    .nav-links a {
+        font-size: 1.2rem; /* Smaller font size for mobile */
     }
 
-    h2, h1 {
-        font-size: 2rem;
-    }
-
-    p, ul {
-        font-size: 1rem;
+    /* Responsive Sticky Button */
+    .sticky-button, .sticky-button-bis {
+        font-size: 0.9rem;
+        padding: 0.6rem 1rem;
+        right: 2vw;
+        bottom: 4vh;
     }
 }
 
 /* Tablet (601px to 1024px) */
 @media (max-width: 1024px) {
-    
+    .nav h1 {
+        font-size: 1.5rem; /* Slightly smaller font size for tablets */
+    }
+
+   
     img {
         width: 85vw;
         height: auto;
     }
+
+    /* Responsive Sticky Button */
+    .sticky-button, .sticky-button-bis {
+        font-size: 1.1rem;
+        padding: 0.9rem 1.3rem;
+        right: 2vw;
+        bottom: 4vh;
+    }
 }
+
+/* Larger Screens (1025px and above) */
 @media (min-width: 1025px) {
+    .nav h1 {
+        font-size: 2.2rem; /* Larger font size for larger screens */
+        font-weight: 500;
+    }
+
     .nav-toggle {
-        display: none;
+        display: none; /* Hide nav-toggle on larger screens */
+    }
+
+    /* Larger Sticky Button */
+    .sticky-button, .sticky-button-bis {
+        font-size: 1.2rem;
+        padding: 1rem 1.5rem;
+        right: 2vw;
+        bottom: 5vh;
     }
 }

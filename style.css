@@ -21,7 +21,6 @@ body {
     align-items: center; /* Center the items horizontally */
     justify-content: flex-start; /* Start from the top */
     min-height: 100vh; /* Ensure body takes full height */
-    padding: 20px; /* Optional: adds some space around the content */
 }
 
 /* Text Styling */
@@ -155,12 +154,21 @@ a {
 .bar {
     height: 3px;
     width: 100%;
-    background-color: white;
+    background-color: #706545;
+}
+@media (max-width: 1024px) {
+    .nav h1 {
+        font-size: 1.5rem; /* Slightly smaller font size for tablets */
+    }
+   
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     /* Make nav links stack vertically on smaller screens */
+    .nav h1 a {
+        font-size: 1.4rem; /* Smaller font size for mobile */
+    }
     .nav-links {
         display: none; /* Hide links by default */
         width: 100%;
