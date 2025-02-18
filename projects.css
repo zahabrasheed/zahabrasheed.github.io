@@ -263,6 +263,12 @@ img {
     max-width: 100%;
     height: auto;
 }
+@media (min-width: 1024px) {
+    img {
+        width: 80%; /* Adjust image width for larger screens */
+    }
+}
+
 
 /* For smaller screens */
 @media (max-width: 1024px) {
