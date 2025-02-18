@@ -260,6 +260,8 @@ footer p {
 img {
     display: block;    /* Prevents any extra space below the image */
     margin: 0 auto;    /* Centers the image horizontally */
+    max-width: 100%;
+    height: auto;
 }
 
 /* For smaller screens */
