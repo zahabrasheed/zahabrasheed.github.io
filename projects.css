@@ -258,10 +258,6 @@ footer p {
     background-color: #706545;
 }
 img {
-    width: 100%;       /* Makes the image responsive to its container */
-    max-width: 100%;   /* Prevents the image from exceeding the container width */
-    height: auto;      /* Ensures the aspect ratio is maintained */
-    padding: 10px;     /* Optional: adds padding if needed */
     display: block;    /* Prevents any extra space below the image */
     margin: 0 auto;    /* Centers the image horizontally */
 }
