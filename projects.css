@@ -263,6 +263,12 @@ img {
     max-width: 100%;
     height: auto;
 }
+.gif{
+    margin-top: 2vh;
+    height: 50vh;
+    width: auto;
+    background-color: #EFD0CE;
+}
 @media (min-width: 1024px) {
     img {
         width: 80%; /* Adjust image width for larger screens */
