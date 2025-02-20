@@ -1,39 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hogwarts Style Point Tracker</title>
-    <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="/projects.css">
-</head>
-<body>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/projects.css" />
+  </head>
+  <body>
     <nav class="nav">
-        <h1><a href="/index.html">Zahabiyah Rasheed</a></h1>
-        <button class="nav-toggle" aria-label="Open navigation">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </button>
-        <ul class="nav-links">
-            <li><a href="/index.html#projects">Projects</a></li>
-            <li><a href="/index.html#about">About Me</a></li>
-            <li><a href="/resume.html">Resume</a></li>
-            <li><a href="https://www.linkedin.com/in/zahabiyah-rasheed-27018528b/" target="_blank">Linkedin</a></li>
-            <li><a href="https://github.com/zahabrasheed" target="_blank">Github</a></li>
+      <h1><a href="/index.html">Zahabiyah Rasheed</a></h1>
+      <button class="nav-toggle" aria-label="Open navigation">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="/index.html#projects">Projects</a></li>
+        <li><a href="/index.html#about">About Me</a></li>
+        <li><a href="/resume.html">Resume</a></li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/zahabiyah-rasheed-27018528b/"
+            target="_blank"
+            >Linkedin</a
+          >
+        </li>
+        <li>
+          <a href="https://github.com/zahabrasheed" target="_blank">Github</a>
+        </li>
+      </ul>
+    </nav>
+    <article class="project">
+      <h2>Mahad al Zahra Conduct Tracker</h2>
+      <div class = "project-description-maz">
+        <!-- Project Description with your existing GIF -->
+        <img
+          class="gif"
+          src="/assets/maz.gif"
+          alt="Animated preview of the tracker"
+        />
+        <section class="project-description">
+          <h2>The Problem: A Broken System for Behavior Tracking</h2>
+          <p>
+            Teachers at Mahad Al Zahra struggled with an outdated system—an
+            Excel sheet—to track student behavior. The result? Inconsistent
+            reporting, frustrated parents, and teachers unable to provide clear,
+            objective insights. Parents often doubted reports, unsure if
+            teachers were exaggerating or downplaying their child's behavior.
+            This lack of transparency eroded trust between educators and
+            families.
+          </p>
+          <p>
+            We needed a better way: A seamless, reliable platform that required
+            minimal technical skills and kept all stakeholders informed.
+          </p>
+        </section>
+      </div>
+      <!-- Approach Section -->
+      <section class="approach">
+        <h2>Our Approach: Building a Simple Yet Powerful Tool</h2>
+        <p>
+          To solve this, we designed the
+          <strong>Hogwarts Style Point Tracker</strong>, a web application that
+          allows teachers to log both positive and negative behaviors in real
+          time, automatically generating clear reports for parents.
+        </p>
+        <ul>
+          <li>
+            <strong>Key Challenge:</strong> Teachers had varying levels of
+            technological expertise, so the tool had to be
+            <strong>extremely simple to use</strong>.
+          </li>
+          <li>
+            <strong>Research:</strong> We conducted interviews with teachers to understand their frustrations and needs.
+          </li>
+          <li>
+            <strong>Core Design Decisions:</strong>
+            <ul>
+              <li>
+                A <strong>one-page form</strong> for quick behavior tracking.
+              </li>
+              <li><strong>Mobile-first design</strong> for easy access.</li>
+              <li>
+                <strong>Automated reporting</strong> to ensure accuracy and
+                transparency.
+              </li>
+            </ul>
+          </li>
         </ul>
-    </nav>  
-    <img class ="gif" src="/assets/maz.gif">
-    <img src="/assets/MAZPDF/1.png" alt = "MAZ Case Study Page 1">
-    <img src="/assets/MAZPDF/2.png" alt="MAZ Case Study Page 2">
-    <img src="/assets/MAZPDF/3.png" alt="MAZ Case Study Page 3" >
-    <img src="/assets/MAZPDF/conclusion.png" alt="MAZ Case Study Page 4">
+      </section>
+
+      <!-- Iterations Section with Prototype Iteration Photos -->
+      <section class="iterations">
+        <h2>Iterating for Success</h2>
+        <p>
+          Initially, we assumed the system would primarily be for only logging.
+          However, feedback revealed that teachers wanted the ability to
+          <strong>engage students in healthy competition.</strong> They also wanted to send reports and look at student behavior ovet time. 
+          This led us to create a <strong>user friendly reports page</strong>, with automated emailing capability to parents.
+        </p>
+        <div class="iteration-gallery">
+          <figure>
+            <img src="/assets/prototype-photos-maz/1.png" alt="Prototype Iteration 1" />
+            <figcaption>
+              Prototype Iteration 1: No leaderboard and log in system
+            </figcaption>
+          </figure>
+          <figure>
+            <img src="/assets/prototype-photos-maz/2.png" alt="Prototype Iteration 1" />
+            <figcaption>
+              Prototype Iteration 1: Form for reporting student's behavior
+            </figcaption>
+          </figure>
+          <figure>
+            <img src="/assets/prototype-photos-maz/3.png" alt="Prototype Iteration 2" />
+            <figcaption>
+              Prototype Iteration 2: Log in feature added to improve data integrity
+            </figcaption>
+          </figure>
+          <figure>
+            <img src="/assets/prototype-photos-maz/4.png" alt="Prototype Iteration 2" />
+            <figcaption>
+              Prototype Iteration 2: Leaderboard added based on user feedback to encourage healthy competition
+            </figcaption>
+          </figure>
+          <figure>
+            <img src="/assets/prototype-photos-maz/5.png" alt="Prototype Iteration 3" />
+            <figcaption>
+              Prototype Iteration 3: Ability for users to create a diverse range of reports and send automated emails to parents.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Expected Impact Section -->
+      <section class="impact">
+        <h2>Expected Impact: A Trusted Communication Bridge</h2>
+        <p>
+          Although full implementation is still in progress, early feedback
+          suggests significant improvements:
+        </p>
+        <ul>
+          <li>
+            <strong>High teacher adoption potential</strong>, based on usability
+            testing.
+          </li>
+          
+          <li>
+            <strong>Ease of Use Score:</strong> Positive preliminary responses
+            from teachers.
+          </li>
+          <li>
+            <strong>Report accuracy expected to improve</strong>, reducing
+            inconsistencies in student records.
+          </li>
+          <li>
+            <strong>Increased parent trust</strong>, with initial feedback
+            praising clarity and transparency.
+          </li>
+        </ul>
+        <p>
+          Moving forward, we plan to integrate
+          <strong>fully automated</strong> monthly emails to refine the platform further and
+          ensure it continues to meet user needs.
+        </p>
+      </section>
+
+      <!-- Final Thoughts Section -->
+      <section class="final-thoughts">
+        <section class="final-thoughts">
+            <h2>Final Thoughts</h2>
+            <p>
+              This project was all about finding the right balance between user experience and
+               functionality. By keeping things simple, transparent, and efficient, we built a tool 
+               that can really improve communication between teachers and parents, making student behavior 
+               tracking clearer and more trustworthy. This was also my first time working in the UI/UX space, 
+               and it pushed me to think differently—not just about how I build things, 
+               but about how design and software work together to shape the way people interact with technology.
+            </p>
+          </section>          
+    </article>
+
     <a href="/index.html#projects" class="sticky-button">Back to Projects</a>
 
     <footer>
-        <p>&copy;Zahabiyah Rasheed </p>
+      <p>&copy;Zahabiyah Rasheed</p>
     </footer>
-        <script src="/script.js"></script>
-
-</body>
+    <script src="/script.js"></script>
+  </body>
 </html>

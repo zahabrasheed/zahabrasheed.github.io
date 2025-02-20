@@ -227,7 +227,7 @@ a {
     z-index: 1;
     width: 100%; /* Ensure full-width use for text */
     margin-bottom: 2%; /* Use relative margins */
-    text-align: center; /* Align text in center for smaller screens */
+    text-align: left; /* Align text in center for smaller screens */
     max-width: 100%; /* Ensure they don't exceed parent */
     word-wrap: break-word; /* Ensure words break properly for smaller devices */
 }
