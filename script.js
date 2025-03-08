@@ -35,3 +35,53 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Create overlay element
+    const overlay = document.createElement("div");
+    overlay.classList.add("image-popup-overlay");
+    overlay.innerHTML = `<img src="" alt="Popup Image">`;
+    document.body.appendChild(overlay);
+    
+    const popupImage = overlay.querySelector("img");
+
+    // Click any image to enlarge it
+    document.addEventListener("click", function (e) {
+        if (e.target.tagName === "IMG" && !e.target.closest(".image-popup-overlay")) {
+            popupImage.src = e.target.src; // Set image source
+            overlay.classList.add("show");
+        }
+    });
+
+    // Click outside the image to close popup
+    overlay.addEventListener("click", function () {
+        overlay.classList.remove("show");
+    });
+});
+// Select all images on the page
+document.querySelectorAll("img").forEach(img => {
+    img.addEventListener("click", function () {
+        let popup = document.getElementById("imagePopup");
+        let popupImg = document.getElementById("popupImg");
+        
+        // Ensure this.src is valid before setting it
+        if (this.src) {
+            popupImg.src = this.src; 
+            popup.classList.add("active");
+        } else {
+            console.error("Image source is missing or broken!");
+        }
+    });
+});
+
+// Function to close the popup
+function closePopup() {
+    document.getElementById("imagePopup").classList.remove("active");
+}
+
+// Close when clicking outside the image
+document.getElementById("imagePopup").addEventListener("click", function (e) {
+    if (e.target === this) {
+        closePopup();
+    }
+});

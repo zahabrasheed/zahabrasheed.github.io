@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lora&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -16,19 +15,22 @@ html {
 }
 
 body {
-    font-family: "Lora", serif; /* Apply Lora to the body */
-    background: #B3BCBB;
+    font-family: "poppins"; /* Apply Lora to the body */
     display: flex;
     flex-direction: column; /* Stack elements vertically */
     align-items: center; /* Center the items horizontally */
     justify-content: flex-start; /* Start from the top */
     min-height: 100vh; /* Ensure body takes full height */
-    padding: 20px; /* Optional: adds some space around the content */
+    color: #3B4443;
 }
-
+section{
+    padding-bottom: 2%;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
 /* Text Styling */
 p {
-    font-family: "Roboto Condensed", sans-serif; /* Apply Roboto Condensed to paragraphs */
+    font-family: "poppins", sans-serif; /* Apply Roboto Condensed to paragraphs */
     color:  #3B4443;
 }
 
@@ -41,7 +43,7 @@ a {
     position: fixed;
     bottom: 100px;
     right: 20px;
-    background-color: #706545; /* Green background */
+    background-color: #3F6C78; /* Green background */
     color:  #F9EBEA;
     padding: 10px 15px;
     border: none;
@@ -61,7 +63,7 @@ a {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #706545; /* Green background */
+    background-color: #3F6C78;
     color:  #F9EBEA;
     padding: 10px 15px;
     border: none;
@@ -110,45 +112,121 @@ main {
     margin-bottom: 40px;
 }
 
-h2 {
-    font-family: 'Lora', serif;
-    font-size: 3rem;
-    font-weight: 700;
-    color: #706545;
-    margin-bottom: 15px;
-}
-h1{
-    color: #706545;
+/* General Styles */
+h1 {
+    color: #3F6C78;
     font-size: 3rem;
     text-align: center;
     margin-bottom: 3%;
     margin-top: 10px;
-
 }
+
+h2 {
+    font-family: 'Lora', serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #3F6C78;
+    margin-bottom: 2%;
+}
+
+h3 {
+    font-family: 'Lora', serif;
+    font-size: 2rem;
+    font-weight: 500;
+    font-style: italic;
+    color: #1C3633;
+    margin-bottom: 2%;
+    padding: 5%;
+}
+
 ul {
-    list-style: none;
-    font-size: 1.5 rem;
+    list-style: inside;
+    color: #3B4443;
+    font-size: 1.3rem;
+    font-family: "Poppins", sans-serif;
 }
 
 ul li {
-    margin-bottom: 1.5 rem;
-    font-family: "Roboto Condensed", sans-serif;
-
+    margin-bottom: 1.3rem;
+    color: #3B4443;
+    font-family: "Poppins", sans-serif;
 }
 
 ul li strong {
-    font-weight: 700;
-    font-family: "Roboto Condensed", sans-serif; 
-
+    font-weight: 500;
+    color: #4A5F76;
+    font-family: "Poppins", sans-serif;
 }
 
-p{
+strong {
+    color: #4A5F76;
+    font-weight: 500;
+}
+
+p {
     font-size: 1.3rem;
-    font-family: "Roboto Condensed", sans-serif; 
-
+    font-family: "Poppins", sans-serif;
+    color: #3B4443;
 }
-footer p {
-    margin: 0;
+
+@media (max-width: 768px) {
+    section{
+        padding: 0%;
+    }
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 5%;
+    }
+
+    h2 {
+        font-size: 2.2rem;
+        margin-bottom: 3%;
+    }
+
+    h3 {
+        font-size: 1.8rem;
+        padding: 4%;
+    }
+
+    ul {
+        font-size: 1.2rem;
+    }
+
+    ul li {
+        margin-bottom: 1rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 5%;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.6rem;
+        padding: 3%;
+    }
+
+    ul {
+        font-size: 1.1rem;
+    }
+
+    ul li {
+        margin-bottom: 0.8rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+    }
 }
 
 .hook {
@@ -213,7 +291,13 @@ footer p {
     max-width: 1200px;
     margin: 2rem auto;
     padding: 2rem;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+   
+
 }
+
 
 
 /* Image */
@@ -235,14 +319,14 @@ footer p {
   .project h2 {
     font-family: 'Lora', serif;
     font-size: 2.5rem;
-    color: #706545;
+    color: #3F6C78;
     margin-bottom: 1rem;
     text-align: center;
   }
   
   /* Paragraphs within the project */
   .project p {
-    font-family: "Roboto Condensed", sans-serif;
+    font-family: "poppins", sans-serif;
     font-size: 1.3rem;
     line-height: 1.6;
     color: #3B4443;
@@ -252,6 +336,10 @@ footer p {
   /* Each section (approach, iterations, impact, final-thoughts) spacing */
   .project section {
     margin: 2rem 0;
+    padding: 2rem;
+    padding-bottom: 2%;
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
   
   
@@ -293,12 +381,7 @@ footer p {
     margin-left: auto;
     margin-right: auto;
   }
-  .approach p,
-.approach ul,
-.approach li,
-.impact p,
-.impact ul,
-.impact li {
+p, ul,li {
   font-size: 1.3rem; /* Keeps text readable */
   line-height: 1.8;
 }
@@ -331,12 +414,7 @@ footer p {
   }
   
 @media (max-width: 768px) {
-  .approach p,
-  .approach ul,
-  .approach li,
-  .impact p,
-  .impact ul,
-  .impact li {
+  p, ul, li {
     font-size: 1.1rem; /* Slightly larger for mobile readability */
     line-height: 1.8; /* More spacing for easier reading */
   }
@@ -383,79 +461,87 @@ footer p {
 }
 
 
-/* Navigation Bar */
+/* General Styling for the Navigation Bar */
 .nav {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #F9EBEA;
-    padding: 10px 20px;
+    justify-content: space-between; /* Space between the heading and the links */
+    align-items: center; /* Vertically center the content */
+    background-color:#F9EBEA;
+    padding-left:2%;
+    padding-right:2%;
     height: 8vh;
     position: sticky;
-    top: 0;
-    z-index: 100;
-    width: 100%;
+    top: 0; /* Keeps the nav fixed to the top */
+    z-index: 100; /* Keeps the nav on top */
+    width: 100%; /* Ensures the nav spans the full width */
 }
 
-/* Underline for Navigation Bar */
+/* Underline for the Navigation Bar */
 .nav::after {
     content: "";
     position: absolute;
     bottom: 0;
-    border-bottom: 2px solid rgba(112, 101, 69, 1);
-    left: 40%;
-    width: 20%;
-    height: 0px;
-    background-color: rgba(112, 101, 69, 1);
+
 }
 
 /* Navigation Heading */
 .nav h1 {
-    font-size: 2rem;
-    color: rgba(112, 101, 69, 1);
+    font-size: 36px;
+    color:#3B4443;
     margin: 0;
     padding-right: 100px;
     font-weight: bolder;
+    font-family: "lora","Serif";
 }
 
-/* Navigation Links */
+/* General Navigation Links Styling */
+.nav a {
+    color:#3B4443;
+    text-decoration: none;
+}
+
+/* Navigation Links Layout */
 .nav-links {
     list-style: none;
     display: flex;
     gap: 20px;
     margin: 0;
     padding: 0;
-    justify-content: flex-start;
-    flex-wrap: wrap;
+    justify-content: flex-start; /* Align links to the left */
+    flex-wrap: wrap; /* Ensure links wrap if there's not enough space */
 }
 
+/* Individual Navigation Item */
 .nav-links li {
     display: inline-block;
-    font-family: Lora;
 }
 
+/* Navigation Link Styles */
 .nav-links a {
-    color: rgba(112, 101, 69, 1);
-    font-size: 1.6rem;
-    font-weight: bold;
+    text-decoration: none;
+    color: #3B4443;
+    font-size: 26px;
+    font-family: lora ;
+    font-weight: 400;
     transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    text-decoration: underline;
+    color: #EBB0AA;
 }
 
 /* Sticky Line Under the Navigation */
 .nav-underline {
-    width: 400px;
+    width:400.002px;
     height: 0;
     border: 0;
     top: 95px;
-    border-top: 2px solid rgba(112, 101, 69, 1);
+    border-top: 2px solid #4A5F76;
     margin: 0 auto;
     align-items: center;
     position: sticky;
 }
+
 
 /* Hamburger Button */
 .nav-toggle {
@@ -601,4 +687,100 @@ img {
         right: 2vw;
         bottom: 5vh;
     }
+}
+ul .nested-list {
+    margin-left: 20px; /* Moves sublist to the right (adjust as needed) */
+    padding-left: 20px;
+}
+/* Full-width footer styling */
+footer {
+    margin-top: 5%;
+    width: 100%;
+    background-color: #47554f; /* Dark background */
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    position: relative; /* Keeps it at bottom naturally */
+}
+footer p{
+    color: white; /* Light text */
+
+}
+
+/* Container to keep content centered */
+.footer-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 10px;
+}
+
+/* Social links setup */
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Responsive handling */
+    margin: 10px 0;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #F9EBEA;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+}
+
+.social-links a:hover {
+    color: #F6B0A5; 
+}
+
+
+
+
+
+/* Make footer always at bottom, even when content is short */
+@media (max-width: 600px) {
+    .social-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+}
+
+/* Copyright styling */
+.copyright {
+    font-size: 14px;
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+.image-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+}
+
+/* Enlarged Image */
+.image-popup-overlay img {
+    max-width: 100%;
+    max-height: 80%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Show the popup */
+.image-popup-overlay.show {
+    visibility: visible;
+    opacity: 1;
 }

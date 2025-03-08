@@ -1,7 +1,6 @@
 /* GENERAL STYLING */
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lora&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
     margin: 0;
@@ -25,7 +24,7 @@ body {
 
 /* Text Styling */
 p {
-    font-family: "Roboto Condensed", sans-serif; /* Apply Roboto Condensed to paragraphs */
+    font-family: "poppins", sans-serif; /* Apply Roboto Condensed to paragraphs */
     color: rgba(249, 235, 234, 1);
 }
 
@@ -60,8 +59,9 @@ a {
     justify-content: space-between; /* Space between the heading and the links */
     align-items: center; /* Vertically center the content */
     background-color: #B3BCBB;
-    padding: 10px 20px;
-    height: 8vh;
+    padding-left: 2%;
+    padding-right: 2%;
+    height: 10vh;
     position: sticky;
     top: 0; /* Keeps the nav fixed to the top */
     z-index: 100; /* Keeps the nav on top */
@@ -73,25 +73,22 @@ a {
     content: "";
     position: absolute;
     bottom: 0;
-    border-bottom: 2px solid rgba(112, 101, 69, 1);
-    left: 40%; /* Adjust to control the starting position */
-    width: 20%; /* Adjust to control the width of the line */
-    height: 0px; /* Thickness of the line */
-    background-color: rgba(112, 101, 69, 1); /* Line color */
+    border-bottom: 2px solid  #4A5F76;
+    
 }
 
 /* Navigation Heading */
 .nav h1 {
     font-size: 36px;
-    color: rgba(112, 101, 69, 1);
+    color:#3B4443;
     margin: 0;
     padding-right: 100px;
-    font-weight: bolder;
+    font-weight: 100;
 }
 
 /* General Navigation Links Styling */
 .nav a {
-    color: rgba(112, 101, 69, 1);
+    color:#3B4443;
     text-decoration: none;
 }
 
@@ -114,15 +111,13 @@ a {
 /* Navigation Link Styles */
 .nav-links a {
     text-decoration: none;
-    color: rgba(112, 101, 69, 1);
+    color: #3B4443;
     font-size: 26px;
-    font-weight: bold;
     transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: rgba(112, 101, 69, 1);
-    text-decoration: underline;
+    color: #7E958F
 }
 
 /* Sticky Line Under the Navigation */
@@ -131,7 +126,7 @@ a {
     height: 0;
     border: 0;
     top: 95px;
-    border-top: 2px solid rgba(112, 101, 69, 1);
+    border-top: #4A5F76;
     margin: 0 auto;
     align-items: center;
     position: sticky;
@@ -154,7 +149,7 @@ a {
 .bar {
     height: 3px;
     width: 100%;
-    background-color: #706545;
+    background-color:#4A5F76;
 }
 @media (max-width: 1024px) {
     .nav h1 {
@@ -219,11 +214,11 @@ a {
     flex-direction: column;
     padding: 5%;
     margin: 20px auto;
-    margin-top: 180px;
+    margin-top: 15%;
 }
 
 .definition-box h1, .definition-box h3, .definition-box p {
-    color: #3B4443;
+    color: #47554f;
     z-index: 1;
     width: 100%; /* Ensure full-width use for text */
     margin-bottom: 2%; /* Use relative margins */
@@ -267,28 +262,19 @@ a {
     font-size: 64px;
     font-style: italic;
     font-weight: 700;
-    color: #706545;
+    color: #47554f;
 }
 
 .project-heading {
     position: relative; /* Make this a positioning context for child elements */
-    padding: 100px 20px; /* Adjust padding to create space for text */
+    padding: 10px; /* Adjust padding to create space for text */
     margin-left: 0; /* Remove any left margin to align to the left side */
-    margin-top: 150px;
-    text-align: left; /* Align text to the left */
+    margin-top: 5%;
+    text-align: center; /* Align text to the left */
     z-index: 2; /* Ensure text is above the gradient */
     width: 100%; /* Make sure it's full width */
 }
 
-.project-gradient {
-    position: absolute; /* Position the gradient behind the text */
-    top: 0; /* Align it to the top of the container */
-    left: 0; /* Align it to the left of the container */
-    width: auto; /* Make the gradient span the full width of the container */
-    height: 100%; /* Make it fill the container's height */
-    z-index: -1; /* Ensure the gradient is behind the text */
-    object-fit: cover; /* Ensure the image covers the full container */
-}
 
 
 
@@ -305,9 +291,7 @@ a {
 .project-box {
     display: flex;
     align-items: flex-start; /* Align text and image consistently */
-    background-color: #F9EBEA;
-    border-radius: 16px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: none;
     padding: 30px;
     width: 100%; /* Ensure boxes take full container width */
     max-width: 1000px; /* Restrict maximum width */
@@ -330,7 +314,7 @@ a {
 }
 
 .project-info h3 {
-    color: #999;
+    color: black;
     font-size: 16px;
     margin: 0;
     padding-bottom: 8px;
@@ -340,13 +324,13 @@ a {
 .project-info h2 {
     font-size: 24px;
     margin: 0;
-    color: #706545;
+    color: #3B4443;
     padding-bottom: 12px;
     font-weight: bolder;
 }
 
 .project-info p {
-    color: #666;
+    color: #374D4B;
     font-size: 16px;
     line-height: 1.6;
 }
@@ -354,22 +338,21 @@ a {
 .view-case-study-btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #333; /* Button background */
+    background-color: #34595E; /* Button background */
     color: #fff; /* Button text color */
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
-    position: relative; /* Needed for pseudo-elements */
-    border: 2px solid transparent;
-    transition: all 0.3s ease; /* Smooth transition for hover effects */
-    margin: 3%;
+    position: center; /* Needed for pseudo-elements */
+    transition: all 0.1s ease; /* Smooth transition for hover effects */
+    margin-top: 3%;
+    margin-bottom: 3%;
 }
 
 .view-case-study-btn:hover {
-    background-color: #555; /* Slightly lighter background on hover */
-    color: #fff; /* Keep text color consistent */
+    background-color: #EBB0AA; /* Slightly lighter background on hover */
+    color: #333; /* Keep text color consistent */
     border-color: #EBB0AA; /* Add outline effect */
-    box-shadow: 0 0 8px #EBB0AA, 0 0 15px #EBB0AA; /* Glowing shadow effect */
 }
 
 .view-case-study-btn:focus {
@@ -381,7 +364,7 @@ a {
     font-size: 16px;
     color: #3B4443;
     margin-bottom: 8px;
-    font-family: "Roboto Condensed", sans-serif;;
+    font-family: "poppins", sans-serif;;
 }
 
 .project-image {
@@ -464,9 +447,8 @@ a {
 /* about section styling */
 .about-heading {
     position: relative; /* Establish positioning context for child elements */
-    padding: 100px 20px; /* Create spacing for text */
-    margin-top: 50px; /* Adjust the top margin */
-    text-align: right; /* Align text to the right */
+    padding: 5% ; /* Create spacing for text */
+    text-align: center; /* Align text to the right */
     z-index: 2; /* Ensure text stays above the background */
     width: 100%; /* Ensure the container spans the full width */
     height: 300px; /* Adjust height to fit content and gradient */
@@ -476,32 +458,20 @@ a {
     font-size: 64px;
     font-style: italic;
     font-weight: 700;
-    color: #706545;
+    color: #47554f;
     margin: 0; /* Remove default margin for better alignment */
     z-index: 2; /* Keep text above the gradient */
-    position: relative; /* Keep the text within the positioning context */
+    position: left; /* Keep the text within the positioning context */
     right: 2%; /* Slight adjustment for precise alignment */
 }
 
-.about-gradient {
-    position: absolute; /* Position the gradient image relative to .about-heading */
-    top: 50%; /* Adjust gradient vertically */
-    left: 0; /* Align to the left of the container */
-    transform: translateY(-50%); /* Center gradient vertically */
-    width: 100%; /* Ensure gradient spans the entire width */
-    height: 100%; /* Ensure gradient spans the container height */
-    background: url('/assets/Ellipse 6.png') no-repeat right 1%; /* Fine-tune position */
-    background-size: contain; /* Adjust to fit the container */
-    z-index: 1; /* Place gradient behind text */
-}
 
 .about-section {
     display: flex;
     align-items: center; /* Align content vertically */
+    margin-top: 1%;
     justify-content: space-between; /* Ensure proper spacing between items */
-    padding: 30px;
     max-width: 1200px;
-    margin: auto;
     gap: 30px; /* Add gap between image and text */
 }
 
@@ -514,7 +484,7 @@ a {
     flex: 2;
     background-color: #47554f;
     color: #fff;
-    padding: 30px; /* Increase padding for better readability */
+    padding: 3%; /* Increase padding for better readability */
     border-radius: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     font-size: 20px;
@@ -523,7 +493,7 @@ a {
 }
 
 .collage{
-    margin-top: 10px;
+    margin-top: 5%;
     display:flex;
     z-index: 100;
 
@@ -610,7 +580,7 @@ a {
 
 @media only screen and (max-width: 768px) {
     .about-heading {
-        padding: 50px 10px;
+        padding: 10px;
         height: 250px; /* Adjust height for smaller screens */
     }
 
@@ -639,7 +609,7 @@ a {
 
 @media only screen and (max-width: 480px) {
     .about-heading {
-        padding: 40px 10px;
+        padding: 2%;
         height: 200px; /* Reduce height further for smaller screens */
     }
 
@@ -650,10 +620,70 @@ a {
 
     .about-content {
         font-size: 14px; /* Smaller font size for mobile */
-        padding: 10px;
+        padding: 2%;
     }
 
     .collage {
         display: none; /* Hide the collage on screens smaller than 768px */
     }
+}
+
+/* Full-width footer styling */
+footer {
+    margin-top: 5%;
+    width: 100%;
+    background-color: #47554f; /* Dark background */
+    color: white; /* Light text */
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    position: relative; /* Keeps it at bottom naturally */
+}
+
+/* Container to keep content centered */
+.footer-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 10px;
+}
+
+/* Social links setup */
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Responsive handling */
+    margin: 10px 0;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #F9EBEA;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+}
+
+.social-links a:hover {
+    color: #F6B0A5; /* OCEAN color for hover effect */
+}
+
+
+
+
+
+/* Make footer always at bottom, even when content is short */
+@media (max-width: 600px) {
+    .social-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+}
+
+/* Copyright styling */
+.copyright {
+    font-size: 14px;
+    margin-top: 10px;
+    opacity: 0.8;
 }
