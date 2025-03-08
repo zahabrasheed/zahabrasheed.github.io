@@ -79,9 +79,12 @@ function closePopup() {
     document.getElementById("imagePopup").classList.remove("active");
 }
 
-// Close when clicking outside the image
-document.getElementById("imagePopup").addEventListener("click", function (e) {
-    if (e.target === this) {
+document.addEventListener("click", function (e) {
+    const popup = document.getElementById("imagePopup");
+    const popupImg = document.getElementById("popupImg");
+
+    // If the popup is open AND the click is not on the image or close button → close the popup
+    if (popup.style.display === "block" && !popupImg.contains(e.target)) {
         closePopup();
     }
 });
