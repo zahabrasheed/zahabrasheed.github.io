@@ -674,3 +674,32 @@ footer {
     margin-top: 10px;
     opacity: 0.8;
 }
+.image-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7); /* Darker semi-transparent gray */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* Ensures it stays on top */
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Enlarged Image */
+.image-popup-overlay img {
+    max-width: 100%;
+    max-height: 80%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Show the popup */
+.image-popup-overlay.show {
+    visibility: visible;
+    opacity: 1;
+}

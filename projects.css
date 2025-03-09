@@ -167,7 +167,7 @@ p {
 
 @media (max-width: 768px) {
     .project section{
-        padding: 0%;
+        padding: 2%;
     }
     h1 {
         font-size: 2.5rem;
@@ -357,7 +357,6 @@ p {
 }
 
 .iteration-item p {
-    font-size: 1.1rem;
     line-height: 1.6;
     justify-content: center;
     place-content: center
@@ -373,7 +372,8 @@ p {
     }
 
     .iteration-item img {
-        max-width: 80%;
+        max-height: 50vh;
+        width:auto;
     }
 }
   
