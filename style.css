@@ -66,6 +66,7 @@ a {
     top: 0; /* Keeps the nav fixed to the top */
     z-index: 100; /* Keeps the nav on top */
     width: 100%; /* Ensures the nav spans the full width */
+    box-shadow: 2px 2px 5px rgba(126, 149, 143, 0.5); 
 }
 
 /* Underline for the Navigation Bar */
@@ -120,17 +121,7 @@ a {
     color: #7E958F
 }
 
-/* Sticky Line Under the Navigation */
-.nav-underline {
-    width:400.002px;
-    height: 0;
-    border: 0;
-    top: 95px;
-    border-top: #4A5F76;
-    margin: 0 auto;
-    align-items: center;
-    position: sticky;
-}
+
 
 /* Hamburger Button (Hidden on Desktop) */
 .nav-toggle {
@@ -146,11 +137,7 @@ a {
     right: 20px; /* Align to the right of the nav bar */
 }
 
-.bar {
-    height: 3px;
-    width: 100%;
-    background-color:#4A5F76;
-}
+
 @media (max-width: 1024px) {
     .nav h1 {
         font-size: 1.5rem; /* Slightly smaller font size for tablets */
