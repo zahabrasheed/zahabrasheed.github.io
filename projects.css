@@ -339,44 +339,51 @@ p {
 /* Responsive Styles */
 .iteration-item {
     display: flex;
-    align-items: left;
-    justify-content: left;
+    align-items: center; /* Vertically centers content */
+    justify-content: center; /* Horizontally centers content */
+    text-align: center; /* Centers text inside the paragraph */
     max-height: 60%;
     margin: 0;
     padding-top: 3%;
     padding-bottom: 3%;
-    gap: 5%;
-}
-.reverse{
-    justify-content: right;
-}
-.iteration-item img {
-    width: auto;
-    height: 50vh;
-    align-items: left;
+    gap: 1rem;
 }
 
+.reverse {
+    justify-content: flex-end; /* Changed 'right' to 'flex-end' */
+}
+
+.iteration-item img {
+    width: 50%; /* Ensures responsiveness */
+    max-width: 100%; /* Prevents stretching */
+    height: auto; /* Maintains aspect ratio */
+    object-fit: cover; /* Ensures images display correctly */
+}
+
+/* Text Styling */
 .iteration-item p {
     line-height: 1.6;
-    justify-content: center;
-    place-content: center
+    display: block;
+    text-align: left;
 }
 
 /* Responsive Layout */
 @media (max-width: 768px) {
-
     .iteration-item {
         flex-direction: column;
+        flex-wrap: wrap; /* Allows proper stacking on mobile */
         text-align: left;
         font-size: 16px;
+        align-items: center; /* Center align items on mobile */
     }
 
     .iteration-item img {
         max-height: 50vh;
-        width:auto;
+        width: 100%; /* Ensures it resizes properly on mobile */
+        height: auto; /* Maintains aspect ratio */
     }
 }
-  
+
   /* Ensure your GIF stays nicely sized within its container */
   .gif {
     margin-top: 2vh;
