@@ -569,6 +569,11 @@ p, ul,li {
     right: 20px;
 }
 
+.bar {
+    height: 3px;
+    width: 100%;
+    background-color: #3B4443;
+}
 
 img {
     display: block;    /* Prevents any extra space below the image */

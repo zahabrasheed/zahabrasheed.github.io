@@ -137,6 +137,11 @@ a {
     right: 20px; /* Align to the right of the nav bar */
 }
 
+.bar {
+    height: 3px;
+    width: 100%;
+    background-color: #3B4443;
+}
 
 @media (max-width: 1024px) {
     .nav h1 {
